@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <!-- <script src="https://d3js.org/d3.v4.js"></script> -->
+</head>
+
+<body>
+  <h1>UHERO API Demo</h1>
+
+  This is a simple demo of the using the <a href="api.uhero.hawaii.edu">UHERO API.</a>
+
+  <h2>Categories</h2>
+
+  <ul id="categories_list">
+  </ul>
+
+  <script>
+    var categoryHandler = function (error, data) {
+      console.log("error", error);
+      console.log("data", JSON.parse(data.responseText));
+      categories = JSON.parse(data.responseText).data;
+      console.log(Array.isArray(categories));
+      d3
+        .select("#categories_list")
+        .selectAll("li")
+        .data(categories)
+        .enter().append("li")
+        .text(d => d.name)
+    };
+
+    d3
+      .request("http://api.uhero.hawaii.edu/v1/category")
+      .header("Authorization", "Bearer -VI_yuv0UzZNy4av1SM5vQlkfPK_JKnpGfMzuJR7d0M=")
+      .get(categoryHandler);
+  </script>
+</body>
+
+</html>

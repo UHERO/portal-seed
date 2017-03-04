@@ -1,0 +1,266 @@
+{
+	"variables": [],
+	"info": {
+		"name": "UHERO API",
+		"_postman_id": "cba5bcfd-2de9-c909-1342-0d6b92f21a12",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Observations",
+			"request": {
+				"url": "api.uhero.hawaii.edu/v1/series/observations?id=150390",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer -VI_yuv0UzZNy4av1SM5vQlkfPK_JKnpGfMzuJR7d0M=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Get Observations by Series ID"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Category Series",
+			"request": {
+				"url": "api.uhero.hawaii.edu/v1/category/series?id=18",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer -VI_yuv0UzZNy4av1SM5vQlkfPK_JKnpGfMzuJR7d0M=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Series List by Category ID"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Series Info",
+			"request": {
+				"url": "api.uhero.hawaii.edu/v1/series?id=148038",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer -VI_yuv0UzZNy4av1SM5vQlkfPK_JKnpGfMzuJR7d0M=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Series by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Category",
+			"request": {
+				"url": "api.uhero.hawaii.edu/v1/category?id=12",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer -VI_yuv0UzZNy4av1SM5vQlkfPK_JKnpGfMzuJR7d0M=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Get Category by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "GET categories",
+			"request": {
+				"url": "api.uhero.hawaii.edu/v1/category",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer -VI_yuv0UzZNy4av1SM5vQlkfPK_JKnpGfMzuJR7d0M=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "See all categories"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Top-Level Categories",
+			"request": {
+				"url": "localhost:8080/v1/category?top_level=true",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer OppnaVj5QtxnQOZqHjtziqdw564hUXmMzq9igMRAjFs=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Get all categories with no parent"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Categories by Search Text",
+			"request": {
+				"url": "api.uhero.hawaii.edu/v1/category?search_text=summary",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer -VI_yuv0UzZNy4av1SM5vQlkfPK_JKnpGfMzuJR7d0M=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Get all categories with the word \"summary\" in the name"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Geographies",
+			"request": {
+				"url": "api.uhero.hawaii.edu/v1/geo",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer -VI_yuv0UzZNy4av1SM5vQlkfPK_JKnpGfMzuJR7d0M=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "List all available geographies"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Category Series with Geo Handle",
+			"request": {
+				"url": "api.uhero.hawaii.edu/v1/category/series?id=43&geo=HI&freq=A",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer -VI_yuv0UzZNy4av1SM5vQlkfPK_JKnpGfMzuJR7d0M=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Series List by Category ID and Geo Handle"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Category Geo",
+			"request": {
+				"url": "api.uhero.hawaii.edu/v1/category/geo?id=43",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer -VI_yuv0UzZNy4av1SM5vQlkfPK_JKnpGfMzuJR7d0M=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Geo List by Category ID"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Series Sibling",
+			"request": {
+				"url": "http://api.UHERO.hawaii.edu/v1/series/siblings?id=148031",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer -VI_yuv0UzZNy4av1SM5vQlkfPK_JKnpGfMzuJR7d0M=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Sibling series"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Series Sibling Frequency",
+			"request": {
+				"url": "http://api.UHERO.hawaii.edu/v1/series/siblings/freq?id=148031",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer -VI_yuv0UzZNy4av1SM5vQlkfPK_JKnpGfMzuJR7d0M=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Sibling series avail frequencies"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Series Sibling Geo",
+			"request": {
+				"url": "http://api.UHERO.hawaii.edu/v1/series/siblings/geo?id=148031",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer -VI_yuv0UzZNy4av1SM5vQlkfPK_JKnpGfMzuJR7d0M=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Sibling series avail geos"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Series Search filters",
+			"request": {
+				"url": "api.uhero.hawaii.edu/v1/search?q=income",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer -VI_yuv0UzZNy4av1SM5vQlkfPK_JKnpGfMzuJR7d0M=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Sibling series avail geos"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Series Search results",
+			"request": {
+				"url": "api.uhero.hawaii.edu/v1/search/series?q=income&geo=HON&freq=A&expand=true",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer -VI_yuv0UzZNy4av1SM5vQlkfPK_JKnpGfMzuJR7d0M=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Sibling series avail geos"
+			},
+			"response": []
+		}
+	]
+}
