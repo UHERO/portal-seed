@@ -9,7 +9,7 @@
 <body>
   <h1>UHERO API Demo</h1>
 
-  This is a simple demo of the using the <a href="api.uhero.hawaii.edu">UHERO API.</a>
+  This is a simple demo of the using the <a href="http://api.uhero.hawaii.edu">UHERO API.</a>
 
   <h2>Categories</h2>
 
@@ -18,8 +18,9 @@
 
   <script>
     var categoryHandler = function (error, data) {
-      console.log("error", error);
-      console.log("data", JSON.parse(data.responseText));
+      if (error) {
+        console.log("error", error);
+      }
       categories = JSON.parse(data.responseText).data;
       console.log(Array.isArray(categories));
       d3
@@ -27,7 +28,7 @@
         .selectAll("li")
         .data(categories)
         .enter().append("li")
-        .text(d => d.name)
+        .text(d => d.name);
     };
 
     d3
